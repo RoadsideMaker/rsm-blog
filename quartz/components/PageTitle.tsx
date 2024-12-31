@@ -9,9 +9,9 @@ const PageTitle: QuartzComponent = ({ fileData, cfg, displayClass }: QuartzCompo
   const baseDir = pathToRoot(fileData.slug!)
   const iconPath = joinSegments(baseDir, "static/logo.jpg")
   return (
-    <div>
+    <a href={baseDir}>
       <img src={iconPath} onerror="this.style.display='none'" width="225px" ></img>
-    </div>
+    </a>
     // <table>
     //     <tr>
     //       <td>
