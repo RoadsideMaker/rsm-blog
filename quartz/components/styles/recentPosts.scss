@@ -1,0 +1,60 @@
+@use "../../styles/variables.scss" as *;
+
+.recent-notes {
+  & > h3 {
+    margin: 0.5rem 0 0 0;
+    font-size: 1rem;
+  }
+
+  & > ul.recent-ul {
+    list-style: none;
+    margin-top: 1rem;
+    padding-left: 0;
+
+    & > li {
+      margin: 1rem 0;
+      .section > .desc > h3 > a {
+        background-color: transparent;
+      }
+
+      .section > .meta {
+        margin: 0 0 0.5rem 0;
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+
+.responsive-table {
+  border: 0px solid var(--lightgray);
+  border-collapse: separate;
+  border-radius: 10px;
+  border-spacing: 0;
+  overflow: hidden;
+  margin: 0 auto; 
+  width: 100%;
+}
+
+.responsive-table td {
+ 
+  padding: 15px;
+
+}
+
+/* Desktop version */
+.mobile-table {
+  display: none;
+}
+
+/* Mobile version */
+@media screen and (max-width: 1200px) {
+  .desktop-table {
+      display: none;
+  }
+  
+  .mobile-table {
+      display: table;
+      width: 100%;
+  }
+}

@@ -2,7 +2,7 @@ import { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } fro
 import { FullSlug, SimpleSlug, resolveRelative } from "../util/path"
 import { QuartzPluginData } from "../plugins/vfile"
 import { byDateAndAlphabetical } from "./PageList"
-import style from "./styles/recentNotes.scss"
+import style from "./styles/recentPosts.scss"
 import { Date, getDate } from "./Date"
 import { GlobalConfiguration } from "../cfg"
 import { i18n } from "../i18n"
@@ -22,7 +22,7 @@ const defaultOptions = (cfg: GlobalConfiguration): Options => ({
   linkToMore: false,
   showTags: true,
   filter: () => true,
-  sort: byDateAndAlphabetical(cfg),
+  sort: byDateAndAlphabetical(cfg), 
 })
 
 export default ((userOpts?: Partial<Options>) => {
@@ -48,9 +48,10 @@ export default ((userOpts?: Partial<Options>) => {
             return (
                           
               <li class="recent-li">
+           
                 
               {/* For Post - Cover side by side view */}
-              <table style="border: 1px solid #e5e5e5; border-radius: 10px; border-spacing: 0; padding: 5px; margin: 5px; width=100%;">
+              <table class="responsive-table desktop-table">
                   <tr >
                     <td width="60%"> 
                       <div class="section">
@@ -61,7 +62,6 @@ export default ((userOpts?: Partial<Options>) => {
                             </a>
                             <br/>
                           </h3>
-                          
                           {description}
                           <br/>
                         </div>
@@ -96,7 +96,7 @@ export default ((userOpts?: Partial<Options>) => {
              
               
 {/* For Post - Cover side by side view */}         
-            <table style="border: 1px solid #e5e5e5; border-radius: 10px; border-spacing: 0;  padding: 5px; margin: 5px; width: 100%;">
+            <table class="responsive-table mobile-table">
               <tr>
                 <td>
                 <div class="section">
