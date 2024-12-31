@@ -35,21 +35,24 @@ export default ((userOpts?: Partial<Options>) => {
     const opts = { ...defaultOptions(cfg), ...userOpts }
     const pages = allFiles.filter(opts.filter).sort(opts.sort)
     const remaining = Math.max(0, pages.length - opts.limit)
+    
     return (
       <div class={classNames(displayClass, "recent-notes")}>
         <h3>{opts.title ?? i18n(cfg.locale).components.recentPosts.title}</h3>
         <ul class="recent-ul">
           {pages.slice(0, opts.limit).map((page) => {
+
+            const DEFAULT_COVER_IMAGE = "resources/covers/defaultCoverWide.png"
             const title = page.frontmatter?.title ?? i18n(cfg.locale).propertyDefaults.title
             const description = page.frontmatter?.description ?? i18n(cfg.locale).propertyDefaults.description
-            const coverImage = page.frontmatter?.coverImage ?? i18n(cfg.locale).propertyDefaults.coverImage
+            // const coverImage = page.frontmatter?.coverImage ?? i18n(cfg.locale).propertyDefaults.coverImage
+            const coverImage = page.frontmatter?.coverImage || DEFAULT_COVER_IMAGE
             const tags = page.frontmatter?.tags ?? []
 
             return (
                           
               <li class="recent-li">
-           
-                
+                           
               {/* For Post - Cover side by side view */}
               <table class="responsive-table desktop-table">
                   <tr >

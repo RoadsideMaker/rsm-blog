@@ -3,7 +3,7 @@ title: Choosing CAD Software for 3D printing
 draft: false
 date: 2024-12-31
 description: Discussion on what criteria could be used when choosing appropriate CAD software package.
-coverImage: resources/covers/defaultCoverWide.png
+coverImage: 
 recent: true
 tags:
   - blog
