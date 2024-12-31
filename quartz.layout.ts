@@ -37,10 +37,7 @@ export const defaultContentPageLayout: PageLayout = {
     Component.PageTitle(),
     Component.Darkmode(),
     Component.Search(),
-
     Component.MobileOnly(Component.Spacer()),
-
-
     Component.DesktopOnly(Component.Explorer({
       filterFn: (node) => {
         // set containing names of everything you want to filter out
@@ -51,8 +48,6 @@ export const defaultContentPageLayout: PageLayout = {
     )),
   ],
   right: [
- 
-    
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
@@ -64,6 +59,7 @@ export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
     Component.PageTitle(),
+    Component.Darkmode(),
     Component.Search(),
     Component.MobileOnly(Component.Spacer()),
     Component.DesktopOnly(Component.Explorer({
@@ -75,5 +71,5 @@ export const defaultListPageLayout: PageLayout = {
 
     )),
   ],
-  right: [Component.Darkmode(),],
+  right: [],
 }
