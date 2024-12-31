@@ -20,6 +20,7 @@ export interface Translation {
   propertyDefaults: {
     title: string
     description: string
+    coverImage: string
   }
   components: {
     callout: CalloutTranslation
@@ -41,6 +42,10 @@ export interface Translation {
       title: string
     }
     recentNotes: {
+      title: string
+      seeRemainingMore: (variables: { remaining: number }) => string
+    }
+    recentPosts: {
       title: string
       seeRemainingMore: (variables: { remaining: number }) => string
     }

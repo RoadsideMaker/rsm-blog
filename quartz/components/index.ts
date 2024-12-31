@@ -20,6 +20,9 @@ import MobileOnly from "./MobileOnly"
 import RecentNotes from "./RecentNotes"
 import Breadcrumbs from "./Breadcrumbs"
 import Comments from "./Comments"
+import RecentPosts from "./RecentPosts"
+import OnlyFor from "./OnlyFor"
+import LinksHeader from "./LinksHeader"
 
 export {
   ArticleTitle,
@@ -44,4 +47,7 @@ export {
   NotFound,
   Breadcrumbs,
   Comments,
+  RecentPosts,
+  OnlyFor,
+  LinksHeader,
 }

@@ -4,12 +4,21 @@ import * as Component from "./quartz/components"
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
-  header: [],
-  afterBody: [],
+  header: [
+    Component.LinksHeader()
+  ],
+  afterBody: [
+    Component.OnlyFor(
+      { titles: ["RoadSide Maker Blog"] },
+      Component.RecentPosts({ title: "Recent posts" , limit: 5, filter: (f) => f.slug!.startsWith("") && f.slug! !== "index" && f.frontmatter?.post}),
+    ), 
+    
+  ],
   footer: Component.Footer({
     links: {
       GitHub: "https://github.com/jackyzha0/quartz",
       "Discord Community": "https://discord.gg/cRFFHYye7t",
+      "↑ Scroll to top": "#",
     },
   }),
 }
@@ -23,13 +32,26 @@ export const defaultContentPageLayout: PageLayout = {
     Component.TagList(),
   ],
   left: [
+  
     Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
-    Component.Search(),
     Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.Search(),
+
+    Component.MobileOnly(Component.Spacer()),
+
+
+    Component.DesktopOnly(Component.Explorer({
+      filterFn: (node) => {
+        // set containing names of everything you want to filter out
+        return !node.name.startsWith("resources")
+      },
+    }
+
+    )),
   ],
   right: [
+ 
+    
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
@@ -41,10 +63,16 @@ export const defaultListPageLayout: PageLayout = {
   beforeBody: [Component.Breadcrumbs(), Component.ArticleTitle(), Component.ContentMeta()],
   left: [
     Component.PageTitle(),
-    Component.MobileOnly(Component.Spacer()),
     Component.Search(),
-    Component.Darkmode(),
-    Component.DesktopOnly(Component.Explorer()),
+    Component.MobileOnly(Component.Spacer()),
+    Component.DesktopOnly(Component.Explorer({
+      filterFn: (node) => {
+        // set containing names of everything you want to filter out
+        return !node.name.startsWith("resources")
+      },
+    }
+
+    )),
   ],
-  right: [],
+  right: [Component.Darkmode(),],
 }
