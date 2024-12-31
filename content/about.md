@@ -3,7 +3,7 @@ title: About
 date: 2024-12-31
 description: About page
 ---
-# About website
+# About the website
 This website expands on topics from the  [@RoadSideMaker](https://youtube.com/@roadsidemaker) YouTube channel
  It servs as a reference guide for published videos.
 Additionally the aim is to grow a knowledge base for makers interested in 3D printing and CAD modeling.
