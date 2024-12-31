@@ -1,4 +1,4 @@
 ---
-title: All Blog posts
+title: Blog posts
 description: Lists of all blog posts
 ---
