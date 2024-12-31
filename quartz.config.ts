@@ -12,9 +12,7 @@ const config: QuartzConfig = {
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "plausible",
-    },
+    analytics: { provider: 'posthog', apiKey: 'phc_8Jm9ElmoyWDrVooSFAAyoGgc7U2OduEMHICwlft0Pce', host: 'https://eu.i.posthog.com' },
     locale: "en-US",
     baseUrl: "blog.roadsidemaker.com",
     ignorePatterns: ["private", "templates", ".obsidian"],
