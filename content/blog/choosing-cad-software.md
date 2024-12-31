@@ -1,12 +1,13 @@
 ---
 title: Choosing CAD Software for 3D printing
-draft: true
+draft: false
 date: 2024-12-31
-description: List of my personal criteria for choosing CAD software
+description: Discussion on what criteria could be used when choosing appropriate CAD software package.
 coverImage: resources/covers/defaultCoverWide.png
-post: true
+recent: true
 tags:
   - blog
 ---
 >[!Note] 
->The list of CAD software is not exhaustive. Proposed criteria can be applied to any CAD packages you are trying to choose between.
+>The presented list of CAD software packages is not exhaustive. 
+>Proposed criteria can be applied to any CAD packages you are trying to choose between.

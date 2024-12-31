@@ -11,7 +11,7 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [
     Component.OnlyFor(
       { titles: ["RoadSide Maker Blog"] },
-      Component.RecentPosts({ title: "Recent posts" , limit: 5, filter: (f) => f.slug!.startsWith("") && f.slug! !== "index" && f.frontmatter?.post}),
+      Component.RecentPosts({ title: "Recent posts" , limit: 5, filter: (f) => f.slug!.startsWith("") && f.slug! !== "index" && f.frontmatter?.recent && !f.frontmatter?.draft}),
     ), 
     
   ],
