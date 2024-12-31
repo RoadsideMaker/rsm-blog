@@ -10,10 +10,10 @@ Additionally the aim is to grow a knowledge base for makers interested in 3D pri
 # About me
 My name is Alex, I am IT professional by trade. But I have a lot of hobbies (too many to be honest).
 One thing led to another:
-- Analog photography led to acquiring a 3D printer (Ender 3 v2 and Bambu P1S later)
+- Analog photography led to acquiring a 3D printer (Ender 3 v2 and later Bambu P1S)
 - 3D printing led to modeling parts
 - Modeling parts led to many questions
 - Answers to some questions were not straight forward and lead to research
 - Research accumulated and led to the creation of YouTube channel where I publish answers that were hard to come by
 
-## Socials and contacts links below ⬇️
+## ⬇️ Socials and contact links below 
