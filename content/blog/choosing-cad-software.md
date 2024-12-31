@@ -1,9 +1,9 @@
 ---
 title: Choosing CAD Software for 3D printing
-draft: false
+draft: true
 date: 2024-12-31
 description: List of my personal criteria for choosing CAD software
-coverImage: resources/covers/defaultCoverWide.jpg
+coverImage: resources/covers/defaultCoverWide.png
 post: true
 tags:
   - blog
